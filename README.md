@@ -22,21 +22,13 @@ recuperación realizada.
 
 ## 2. Corpus documental
 
-La aplicación carga los siguientes tres archivos PDF desde la carpeta
-`datos/`:
+La aplicación carga los siguientes tres archivos PDF desde la carpeta `datos/`:
 
-  ----------------------------------------------------------------------------
-  Archivo                                  Contenido / referencia
-  ----------------------------------------------------------------------------
-  `cct130_75.pdf`                          Convenio Colectivo de Trabajo
-                                           130/75.
-
-
-  `Ley20744_legales.pdf`                   Ley de Contrato de Trabajo 20.744.
-
-  `Ley23551_Asociaciones_Sindicales.pdf`   Ley 23.551 de Asociaciones
-                                           Sindicales.
-  ----------------------------------------------------------------------------
+| Archivo | Contenido / referencia |
+|---|---|
+| `cct130_75.pdf` | Convenio Colectivo de Trabajo 130/75. |
+| `Ley20744_legales.pdf` | Ley de Contrato de Trabajo 20.744. |
+| `Ley23551_Asociaciones_Sindicales.pdf` | Ley 23.551 de Asociaciones Sindicales. |
 
 Los archivos deben conservar esos nombres y ubicarse dentro de `datos/`,
 porque `app.py` utiliza esas rutas para cargarlos.
@@ -98,10 +90,10 @@ cargador.
 El texto extraído se divide mediante `RecursiveCharacterTextSplitter`,
 con estos parámetros:
 
-  Parámetro           Valor
-  ----------------- -------
-  `chunk_size`          300
-  `chunk_overlap`        80
+| Parámetro | Valor |
+|---|---:|
+| `chunk_size` | 300 |
+| `chunk_overlap` | 80 |
 
 El solapamiento permite conservar parte del contexto entre fragmentos
 consecutivos. Hicimos pruebas con 300 ya que los artículos de estas normativas son cortos, bajar más de ahí sería forzar cortes en la evidencia. Luego contrastamos con pruebas de chunk size mayores, que no dieron mejores resultados, y demoraban los tiempos de la respuesta.
@@ -144,40 +136,19 @@ interpretado correctamente. Por esto, decidimos elegir el número k que mejor eq
 
 ## 4. Tecnologías utilizadas
 
-  -----------------------------------------------------------------------
-  Tecnología / biblioteca             Función
-  ----------------------------------- -----------------------------------
-  Python 3.12                         Lenguaje y entorno de ejecución.
-
-  `uv`                                Creación del entorno virtual e
-                                      instalación de dependencias.
-
-  Ollama                              Ejecución local de los modelos.
-
-  `bge-m3`                            Modelo utilizado para generar
-                                      embeddings.
-
-  `granite4:latest`                   Modelo utilizado para generar las
-                                      respuestas.
-
-  LangChain                           Integración de carga,
-                                      fragmentación, embeddings y
-                                      generación.
-
-  `PyPDFLoader`                       Extracción del contenido de los
-                                      PDF.
-
-  `RecursiveCharacterTextSplitter`    División del texto en fragmentos.
-
-  Chroma (`langchain-chroma`)         Almacenamiento y recuperación
-                                      vectorial.
-
-  Gradio                              Interfaz local para realizar
-                                      consultas y visualizar resultados.
-
-  `python-dotenv`                     Lectura de variables de
-                                      configuración desde `.env`.
-  -----------------------------------------------------------------------
+| Tecnología / biblioteca | Función |
+|---|---|
+| Python 3.12 | Lenguaje y entorno de ejecución. |
+| `uv` | Creación del entorno virtual e instalación de dependencias. |
+| Ollama | Ejecución local de los modelos. |
+| `bge-m3` | Modelo utilizado para generar embeddings. |
+| `granite4:latest` | Modelo utilizado para generar las respuestas. |
+| LangChain | Integración de carga, fragmentación, embeddings y generación. |
+| `PyPDFLoader` | Extracción del contenido de los PDF. |
+| `RecursiveCharacterTextSplitter` | División del texto en fragmentos. |
+| Chroma (`langchain-chroma`) | Almacenamiento y recuperación vectorial. |
+| Gradio | Interfaz local para realizar consultas y visualizar resultados. |
+| `python-dotenv` | Lectura de variables de configuración desde `.env`. |
 
 ## 5. Requisitos previos
 
