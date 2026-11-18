@@ -27,7 +27,7 @@ La aplicación carga los siguientes tres archivos PDF desde la carpeta
 
   ----------------------------------------------------------------------------
   Archivo                                  Contenido / referencia
-  ---------------------------------------- -----------------------------------
+  ----------------------------------------------------------------------------
   `cct130_75.pdf`                          Convenio Colectivo de Trabajo
                                            130/75.
 
