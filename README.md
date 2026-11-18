@@ -253,6 +253,7 @@ De manera opcional, se puede crear un archivo `.env` en la raíz:
 ```dotenv
 OLLAMA_MODEL=granite4:latest
 OLLAMA_EMBEDDING_MODEL=bge-m3
+```
 
 Como ya se mencionó, los modelos configurados deben estar descargados en Ollama. 
 
