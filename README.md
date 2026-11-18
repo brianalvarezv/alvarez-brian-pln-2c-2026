@@ -241,21 +241,18 @@ La aplicación utiliza `granite4:latest` para generar respuestas y
 
 ## 8. Configuración
 
-La aplicación carga un archivo `.env` ubicado en la carpeta raíz del
-proyecto. Si no se definen variables, utiliza estos valores
-predeterminados:
+La aplicación carga un archivo `.env` ubicado en la carpeta raíz del proyecto. Si no se definen variables, utiliza estos valores predeterminados:
 
-  Variable                   Valor predeterminado   Uso
-  -------------------------- ---------------------- ---------------------------------
-  `OLLAMA_MODEL`             `granite4:latest`      Modelo generador de respuestas.
-  `OLLAMA_EMBEDDING_MODEL`   `bge-m3`               Modelo de embeddings.
+| Variable | Valor predeterminado | Uso |
+|---|---|---|
+| `OLLAMA_MODEL` | `granite4:latest` | Modelo generador de respuestas. |
+| `OLLAMA_EMBEDDING_MODEL` | `bge-m3` | Modelo de embeddings. |
 
 De manera opcional, se puede crear un archivo `.env` en la raíz:
 
-``` dotenv
+```dotenv
 OLLAMA_MODEL=granite4:latest
 OLLAMA_EMBEDDING_MODEL=bge-m3
-```
 
 Como ya se mencionó, los modelos configurados deben estar descargados en Ollama. 
 
